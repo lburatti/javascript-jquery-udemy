@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- <script language="javascript" src="script.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script_jquery.js"></script>
+
+    <style>
+        .black {
+            background-color: black;
+            color: white;
+        }
+
+        .texto {
+            background-color: red;
+        }
+
+        img {
+            height: 200px;
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Olá Mundo!</h1>
+        <h1 id="unico">Olá 2!</h1>
+        <p class="texto">Mensagem 1</p>
+        <p>Mensagem 2</p>
+        <button id="azul">Azul</button>
+        <button id="vermelho">Vermelho</button>
+        <span id="mensagem"></span>
+
+        <br>
+        <br>
+
+        <h1>Slideshow:</h1>
+        <!-- LINKS PARA IMAGENS -->
+        <a href="#" id="link1">1</a>
+        <a href="#" id="link2">2</a>
+        <a href="#" id="link3">3</a>
+        <a href="#" id="link4">4</a>
+        <br>
+        <br>
+        <!-- IMAGENS -->
+        <img id="img1" src="img/01.jpg" alt="imagem 1">
+        <img id="img2" src="img/02.jpg" alt="imagem 2" style="display: none">
+        <img id="img3" src="img/03.jpeg" alt="imagem 3" style="display: none">
+        <img id="img4" src="img/04.jpg" alt="imagem 4" style="display: none">
+
+
+        <!-- OUTRA FORMA DE ESCREVER O CÓDIGO JS (no arquivo HTML) -->
+        <script>
+
+            // OPERADORES MATEMÁTICOS
+            function soma(num1, num2) {
+                var result = num1 + num2;
+                return result;
+            }
+            console.log(soma(1, 2));
+
+            // CONDICIONAIS
+            function retornaSexo(sexo) {
+                // IF / ELSE
+                if(sexo == 'M'){
+                    return 'Masculino';
+                } else if (sexo == 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Outro';
+                }
+
+                // SWITCH / CASE
+                switch(sexo) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+            console.log(retornaSexo('F'));
+
+            // INTERVALO E TIMEOUT
+            function exibeAlgo() {
+                console.log('Hello World');
+            }
+            // vai exibir no console a cada 1s
+            setInterval(exibeAlgo(), 1000);
+
+            // vai exibir no console após 5s
+            setTimeout(exibeAlgo(), 5000);
+        
+        </script>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
